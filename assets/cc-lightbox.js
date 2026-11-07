@@ -1,3 +1,4 @@
+// Deployment refresh: no functional changes.
 (()=>{"use strict";
 const selector='#bwg_container1_0 a.bwg_lightbox[href]';
 let links=[],index=0,overlay=null,display=null,label=null,previousFocus=null,oldOverflow="";
