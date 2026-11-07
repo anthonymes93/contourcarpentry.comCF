@@ -1,0 +1,30 @@
+/* Contour Carpentry static forms — compatible with Elementor layout */
+.cc-contact{width:100%;max-width:100%;font-family:inherit;box-sizing:border-box}
+.cc-contact *{box-sizing:border-box}
+.cc-contact .cc-form-fields{width:100%}
+.cc-contact .cc-field{display:block;margin:0 0 14px;width:100%}
+.cc-contact .cc-field input,.cc-contact .cc-field textarea{width:100%;max-width:100%;display:block;margin:0;min-width:0;padding:13px 15px;background:#fff;color:#232b32;border:1px solid #c7cdd3;border-radius:4px;font:inherit;font-size:16px;line-height:1.5}
+.cc-contact .cc-field textarea{resize:vertical;min-height:112px}
+.cc-contact .cc-field input:focus-visible,.cc-contact .cc-field textarea:focus-visible{outline:2px solid #3872ae;outline-offset:2px}
+.cc-contact .cc-field input::placeholder,.cc-contact .cc-field textarea::placeholder{color:#687782;opacity:1}
+.cc-contact .cc-sr{position:absolute;clip:rect(0,0,0,0);height:1px;width:1px;overflow:hidden;white-space:nowrap}
+.cc-contact .cc-trap{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+.cc-contact .cc-turnstile{margin:0 0 12px;min-height:0}
+.cc-contact .cc-submit{font:inherit;font-weight:700;cursor:pointer;padding:13px 23px;background:#202a31;border:0;border-radius:4px;color:#fff;transition:filter .15s ease}
+.cc-contact .cc-submit:hover{filter:brightness(1.2)}
+.cc-contact .cc-submit:disabled{opacity:.6;cursor:wait}
+.cc-contact .cc-form-status{margin:8px 0 0;font-size:14px;line-height:1.5;color:inherit;min-height:0}
+.cc-contact .cc-form-status:empty{display:none}
+.cc-contact .cc-form-status.cc-error{color:#c33b3b}
+.cc-contact .cc-success[hidden],.cc-contact .cc-form-fields[hidden]{display:none!important}
+.cc-contact .cc-success{min-height:260px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border:1px solid #c8dfd5;background:#f1faf5;border-radius:8px;padding:32px 20px;color:#24503b}
+.cc-contact .cc-success-icon{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#d6f0e2;color:#187444;font:700 29px/1 system-ui}
+.cc-contact .cc-success h3{color:#24503b;font:700 25px/1.3 inherit;margin:16px 0 8px}
+.cc-contact .cc-success p{color:#365948;font-size:15px;line-height:1.6;margin:0}
+.wpforms-container:has(>.cc-contact){margin:0;max-width:100%}
+.wpforms-container.inline-fields:has(>.cc-contact) .cc-contact .cc-form-fields{display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.wpforms-container.inline-fields .cc-contact .cc-field{flex:1 1 170px;margin:0}
+.wpforms-container.inline-fields .cc-contact .cc-submit{flex:0 0 auto}
+.wpforms-container.inline-fields .cc-contact .cc-turnstile{flex:1 1 100%;margin:0}
+.wpforms-container.inline-fields .cc-contact .cc-form-status{flex:1 1 100%}
+@media(max-width:640px){.wpforms-container.inline-fields .cc-contact .cc-field,.wpforms-container.inline-fields .cc-contact .cc-submit{flex:1 1 100%}.cc-contact .cc-field{margin-bottom:12px}}
