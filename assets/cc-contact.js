@@ -27,7 +27,7 @@ const kind=form.dataset.kind;
 const fields=Object.fromEntries(new FormData(form).entries());
 const name=String(fields.name||"").trim(),email=String(fields.email||"").trim(),phone=String(fields.phone||"").trim(),message=String(fields.message||"").trim();
 if(!name||kind==="callback"&&!phone||kind==="quote"&&(!email||!message)){status(form,"Please complete the required fields.",true);return;}
-if(email&&!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)){status(form,"Please enter a valid email address.",true);return;}
+if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){status(form,"Please enter a valid email address.",true);return;}
 if(!turnstileReady||!window.turnstile||!active.has(form)){status(form,loadFailure||"Security verification is loading. Please try again.",true);return;}
 const widget=active.get(form),token=window.turnstile.getResponse(widget);
 if(!token){status(form,"Please complete the security check.",true);return;}
